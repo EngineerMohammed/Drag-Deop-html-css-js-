@@ -3,16 +3,19 @@ let btn = document.getElementById("btn");
 let boxs = document.querySelectorAll(".box");
 let drag = null;
 
+
+window.onload = function () {
+  window.localStorage.getItem("pargh");
+}
 btn.onclick = function () {
-  if (inp.value == "" || inp.value == null) {
-    alert("Your Input is empty");
-  } else {
+  if (inp.value != "") {
     let pargh = document.createElement("p");
     pargh.className = "item";
     let textP = document.createTextNode(inp.value);
     pargh.setAttribute("draggable", "true");
     pargh.appendChild(textP);
     boxs[0].appendChild(pargh);
+    
     inp.value = "";
   }
   dragitem();

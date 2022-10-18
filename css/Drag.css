@@ -71,4 +71,15 @@ button {
   margin: 4px;
   cursor: move;
   color: #fff;
+  text-align: left;
+}
+
+@media (max-width: 776px){
+  .container .list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
